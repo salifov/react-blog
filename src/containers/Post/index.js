@@ -1,14 +1,15 @@
 import React from 'react';
 import './style.css';
-import Card from '../../components/UI/Card';
 import BlogPost from '../../components/BlogPost';
-import Sidebar from '../../components/Sidebar';
+import Layout from '../../components/Layout';
 
-export default function Post() {
+export default function Post(props) {
+
+    console.log(props);
+
     return (
-        <section className="container">
-            <BlogPost></BlogPost>
-            <Sidebar></Sidebar>
-        </section>
+            <Layout>
+                <BlogPost {...props}></BlogPost>
+            </Layout> 
     );
 }
